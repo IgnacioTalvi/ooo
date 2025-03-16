@@ -18,34 +18,34 @@ contarCaracteres(data,"a");
 
 // Ejercicio 1
 
-// function tablaMultiplicar(numero) {
-//   let array = [];
-//   let numeroInicial = 1;
+function tablaMultiplicar(numero) {
+  let array = [];
+  let numeroInicial = 1;
 
-//   for (let i = 0; i < 100; i++)
-//     if (numero % (numeroInicial * i) == 0) {
-//       array.push(numero);
-//     }
-// }
+  for (let i = 0; i < 100; i++)
+    if (numero % (numeroInicial * i) == 0) {
+      array.push(numero);
+    }
+}
 
-// console.log(tablaMultiplicar(8));
+console.log(tablaMultiplicar(8));
 
 // // Ejercicio 2
 
-// let insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
-// let arrayDeNumeros = [];
+let insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
+let arrayDeNumeros = [];
 
-// function chequearNumero() {
-//   while (insertarNumero !== 0) {
-//     arrayDeNumeros.push(insertarNumero);
-//     insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
-//   }
+function chequearNumero() {
+  while (insertarNumero !== 0) {
+    arrayDeNumeros.push(insertarNumero);
+    insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
+  }
 
-//   arrayDeNumeros.sort((a, b) => a - b);
-//   console.log(arrayDeNumeros);
-// }
+  arrayDeNumeros.sort((a, b) => a - b);
+  console.log(arrayDeNumeros);
+}
 
-// chequearNumero();
+chequearNumero();
 
 // Ejercicio 3
 
@@ -60,3 +60,22 @@ function anoBisiesto(ano) {
 }
 
 anoBisiesto(2000);
+
+// Ejercicio 4
+
+const arrayDePalabras = ["Hola", "Chau", "bbbSergio", "Manuel", "bLautaro"];
+let letraRepetida = "";
+
+function contarLetras(array, letra) {
+  let letraRepetida = 0;
+  for (let i = 0; i < array.length; i++) {
+    let letrasSeparadas = array[i].split("");
+    for (let x = 0; x < letrasSeparadas.length; x++)
+      if (letrasSeparadas[x] === letra) {
+        letraRepetida++;
+      }
+  }
+  return letraRepetida;
+}
+
+console.log(contarLetras(arrayDePalabras, "a"));
