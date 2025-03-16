@@ -18,64 +18,45 @@ contarCaracteres(data,"a");
 
 // Ejercicio 1
 
-function tablaMultiplicar(numero) {
-  let array = [];
-  let numeroInicial = 1;
+// function tablaMultiplicar(numero) {
+//   let array = [];
+//   let numeroInicial = 1;
 
-  for (let i = 0; i < 100; i++)
-    if (numero % (numeroInicial * i) == 0) {
-      array.push(numero);
-    }
-}
-
-console.log(tablaMultiplicar(8));
-
-// Ejercicio 2
-
-let insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
-let arrayDeNumeros = [];
-
-function chequearNumero() {
-  while (insertarNumero !== 0) {
-    arrayDeNumeros.push(insertarNumero);
-    insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
-  }
-
-  arrayDeNumeros.sort((a, b) => a - b);
-  console.log(arrayDeNumeros);
-}
-
-chequearNumero();
-
-// let multiples = [];
-
-//   if (numero[i] % multiples == 0) {
-//     return multiples.push(numero[i]);
-//   }
-// }
-
-// console.log(tablaMultiplicar(5));
-
-// const arrayOfMultiples = (a, b) => {
-//   let arr = [];
-//   let x = 1;
-//   for (let i = 1; i <= b; i++) {
-//     arr.push(a * x);
-//     x++;
-//   }
-//   return arr;
-// };
-
-// function multiplesOf(numbers) {
-//   var multiples = numbers[0];
-
-//   for (var i = 0; i < numbers.length; i++) {
-//     if (numbers[i] % multiples === 0) {
-//       multiples = numbers[i];
+//   for (let i = 0; i < 100; i++)
+//     if (numero % (numeroInicial * i) == 0) {
+//       array.push(numero);
 //     }
-//   }
-
-//   return multiples;
 // }
 
-// console.log(multiplesOf([4, 5, 6, 7, 8], 2));
+// console.log(tablaMultiplicar(8));
+
+// // Ejercicio 2
+
+// let insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
+// let arrayDeNumeros = [];
+
+// function chequearNumero() {
+//   while (insertarNumero !== 0) {
+//     arrayDeNumeros.push(insertarNumero);
+//     insertarNumero = parseInt(prompt("Inserte un numero aleatorio"));
+//   }
+
+//   arrayDeNumeros.sort((a, b) => a - b);
+//   console.log(arrayDeNumeros);
+// }
+
+// chequearNumero();
+
+// Ejercicio 3
+
+function anoBisiesto(ano) {
+  if (ano % 400 === 0) {
+    console.log("Año bisiesto");
+  } else if (ano % 100 === 0) {
+    console.log("Año no bisiesto");
+  } else if (ano % 4 === 0) {
+    console.log("Año bisiesto");
+  } else console.log("Año no bisiesto");
+}
+
+anoBisiesto(2000);
